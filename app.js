@@ -38,6 +38,9 @@ typewriter
     .typeString('<strong>, Développeur Font-End !</strong>')
     .pauseFor(1000)
     .deleteChars(10)
+    .typeString('<strong> Back-End !</strong>')
+    .pauseFor(1000)
+    .deleteChars(10)
     .typeString('<strong>Jeux vidéo !</strong>')
     .pauseFor(1000)
     .deleteChars(12)
@@ -45,7 +48,23 @@ typewriter
     .pauseFor(1000)
     .deleteChars(5)
     .typeString('<span style="color : #ff6910"> Javascript !</span>')
-    .pauseFor(1000)
-    .deleteChars(12)
-    .typeString('<span style="color : aqua"> React js !</span>')
     .start()
+
+// Animation Contact
+
+const input_fields = document.querySelectorAll('input');
+
+for (let i = 0; i < input_fields.length; i++) {
+
+    let field = input_fields[i];
+
+    field.addEventListener('input', (e) => {
+        if (e.target.value !== '') {
+            e.target.parentNode.classList.add('animation');
+        }
+        else if (e.target.value == '') {
+            e.target.parentNode.classList.remove('animation');
+        }
+    })
+}
+
