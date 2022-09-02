@@ -773,3 +773,356 @@ h1 {
         overflow: hidden;
     }
 }
+
+/* Section Range---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.section-range {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 200px;
+    border-bottom: 1px dashed #333;
+    background: #485563;
+    background: linear-gradient(to right, #29323c, #485563);
+    color: #f1f1f1;
+    position: relative;
+    z-index: 1;
+}
+
+.range-cont {
+    position: relative;
+
+}
+
+.titre-exp {
+    font-size: 40px;
+    text-align: center;
+    margin: 80px 0 90px 0;
+    padding-left: 300px;
+}
+
+.grill-skill {
+    display: grid;
+    grid-template: repeat(3, 80px) / repeat(2, 500px);
+    gap: 50px;
+    padding-left: 300px;
+}
+
+.barre-skill {
+    height: 15px;
+    background: rgb(167, 146, 243);
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.barre-grises {
+    height: 15px;
+    width: 500px;
+    background: rgb(216, 216, 216);
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.barre-skill.b1 {
+    width: 50%;
+    background: rgb(243, 237, 146);
+}
+
+.barre-skill.b2 {
+    width: 50%;
+}
+
+.barre-skill.b3 {
+    width: 50%;
+}
+
+.barre-skill.b4 {
+    width: 50%;
+    background: rgb(243, 237, 146);
+}
+
+.barre-skill.b5 {
+    width: 50%;
+    background: rgb(243, 237, 146);
+}
+
+.barre-skill.b6 {
+    width: 50%;
+}
+
+@media screen and (max-width : 1400px) {
+    .grill-skill {
+        grid-template: repeat(3, 80px) / repeat(2, 450px);
+
+    }
+
+    .barre-grises {
+        width: 450px;
+
+    }
+}
+
+@media screen and (max-width : 1300px) {
+    .section-range {
+        padding-left: 0;
+    }
+
+    .titre-exp {
+        padding-left: 0;
+    }
+
+    .grill-skill {
+        grid-template: repeat(6, 80px) / 600px;
+        padding-left: 0;
+    }
+
+    .barre-grises {
+        width: 600px;
+    }
+}
+
+@media screen and (max-width : 700px) {
+    .grill-skill {
+        grid-template: repeat(6, 80px) / 400px;
+    }
+
+    .barre-grises {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width : 450px) {
+    .section-range {
+        padding-bottom: 100px;
+        overflow: hidden;
+    }
+
+    .titre-exp {
+        font-size: 30;
+        margin: 60px 0 50px 0;
+    }
+
+    .label-skill {
+        font-size: 20px;
+    }
+
+    .grill-skill {
+        grid-template: repeat(6, 80px) / 300px;
+        gap: 40px;
+    }
+
+    .barre-grises {
+        width: 300px;
+    }
+}
+
+/* Expérience ------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.experience {
+    width: calc(100% - 300px);
+    height: auto;
+    margin-left: auto;
+    padding-bottom: 100px;
+}
+
+.titre-travail {
+    font-size: 40px;
+    text-align: center;
+    margin: 70px 0;
+    color: #333;
+}
+
+.cont-exp-travail {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.barre-vertical {
+    height: 400px;
+    width: 5px;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    left: -30px;
+}
+
+.boule-icone {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #333;
+    background: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boule-icone img {
+    width: 25px;
+    height: 25px;
+}
+
+.flex-cont-bloc-exp {
+    width: 800px;
+    flex-shrink: 1;
+    height: 400px;
+    position: relative;
+}
+
+.bloc {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 37.5px;
+    cursor: pointer;
+    border: 1px solid #333;
+    position: relative;
+}
+
+.contenue-bloc {
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    background: white;
+    transition: transform 0.25s ease-in-out;
+    position: relative;
+    transform: translate(10px, -10px);
+}
+
+.contenue-bloc:hover {
+    transform: translate(0, 0);
+}
+
+.bloc.bloc1 {
+    background: #bfe2ca;
+}
+
+.bloc.bloc2 {
+    background: #4e9967;
+}
+
+.titre-section-bloc {
+    font-family: 'Abril FatFace', sans-serif;
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+@media screen and (max-width : 1300px) {
+    .experience {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width : 950px) {
+    .barre-vertical {
+        margin-left: 60px;
+    }
+
+    .flex-cont-bloc-exp {
+        margin-right: 30px;
+    }
+}
+
+@media screen and (max-width : 520px) {
+    .txt-experience {
+        font-size: 16px;
+    }
+
+    .bloc {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width : 380px) {
+    .experience {
+        overflow: hidden;
+        height: 800px;
+    }
+
+    .txt-experience {
+        font-size: 15px;
+    }
+
+    .contenue-bloc {
+        overflow: scroll;
+    }
+}
+
+/* Section parallax----------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.section-parallax {
+    width: 100%;
+    height: 200px;
+    background: url(ressources/accueil.jpg) no-repeat right / cover fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px dashed #333;
+    border-bottom: 1px dashed #333;
+}
+
+.txt-parallax {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 50px;
+}
+
+.txt-parallax:nth-child(1) {
+    padding-left: 300px;
+}
+
+@media screen and (max-width : 1300px) {
+    .txt-parallax {
+        font-size: 25px;
+        margin: 0 30px;
+    }
+
+    .txt-parallax:nth-child(1) {
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width : 700px) {
+    .txt-parallax {
+        font-size: 22px;
+        margin: 0 25px;
+    }
+}
+
+@media screen and (max-width : 550px) {
+    .section-parallax {
+        flex-direction: column;
+    }
+
+    .txt-parallax {
+        font-size: 20px;
+        margin: 20px 0px;
+    }
+}
+
+@media screen and (max-width : 520px) {
+    .section-parallax {
+        margin-top: 100px;
+        overflow: hidden;
+    }
+
+    .txt-parallax {
+        text-align: center;
+        font-size: 18px;
+        margin: 15px 0px;
+        overflow: hidden;
+    }
+}
