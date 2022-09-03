@@ -1045,6 +1045,12 @@ h1 {
     }
 }
 
+@media screen and (max-width : 900px) {
+    .contenue-bloc {
+        overflow: scroll;
+    }
+}
+
 @media screen and (max-width : 520px) {
     .txt-experience {
         font-size: 16px;
@@ -1065,9 +1071,6 @@ h1 {
         font-size: 15px;
     }
 
-    .contenue-bloc {
-        overflow: scroll;
-    }
 }
 
 /* Section parallax----------------------------------------------------------------------------------------------------------------------------------------------------------- */
